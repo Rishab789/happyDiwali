@@ -1,0 +1,238 @@
+@media (max-width: 500px) {
+
+  @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+ @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+
+ @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Modern+Antiqua&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+
+
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    padding: 0 0;
+  }
+
+  #first_section{
+    background: linear-gradient(180deg, #F7B654 0%, #E12654 100%);
+
+    
+  }
+
+  /* Container styles */
+section > div > div:first-child {
+  position: relative;
+  overflow: hidden;
+  height: 50vh; /* Show only the top half */
+  display: flex;
+  align-items: flex-start; /* Align image to the top */
+  justify-content: center; /* Center the image horizontally */
+  /* background-color: aqua; */
+}
+
+/* Image styles */
+section > div > div:first-child img {
+  position: absolute;
+  top: -65%; /* Adjust this value to crop the desired part of the image */
+  width: 100%;
+  max-height: none; /* Ensures the image does not scale down */
+  object-fit: cover;
+  animation: rotate 10s linear infinite;
+}
+
+h1{
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 1000;
+  color: white;
+  font-size: 3rem;
+}
+
+.head-deepak{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  /* background-color: #f7b654; */
+ 
+}
+
+
+
+.deepak_gif{
+  position: absolute;
+  z-index: 10;
+  right:22px;
+  top:-8px;
+
+}
+
+
+.para1{
+  font-family: "Merriweather Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 1.5rem;
+  color: #fff;
+  padding: 0 1rem;
+
+}
+  
+.btn_div{
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 10px;
+  padding-left: 1rem;
+
+}
+
+button:first-child{
+  border-radius: 40px;
+  border: none;
+  width: 160px;
+  height: 40px;
+  background-color: #fff;
+  color: #000;
+  font-size: 1rem;
+  font-weight: 500;
+}
+button:nth-child(2){
+  border-radius: 40px;
+  width: 130px;
+  height: 40px;
+  border: 2px solid white;
+  background-color: transparent;
+  color: #fff;
+}
+
+.chand_honey{
+  display: flex;
+  justify-content: space-between;
+}
+
+.chand_honey>img:first-child{
+  padding-left: 1rem;
+}
+
+
+.laddu_image_class{
+  display: flex;
+  position: relative;
+  padding: 0 1rem;
+}
+
+.laddu_image_class>img:nth-child(1){
+  position: absolute;
+  z-index: 10;
+  
+}
+.laddu_image_class>img:nth-child(2){
+  position: relative;
+  left: 90px;
+  
+}
+.laddu_image_class>img:nth-child(3){
+  position: relative;  
+  left: 60px;
+  top: -40px;
+
+}
+
+
+
+/* second section   */
+
+#second_section{
+  background-color: #F2DDB4;
+  height: auto;
+  width: 100%;
+  /* position: relative; */
+}
+ 
+
+.rangoli_second{
+  left: 10px;
+
+}
+
+.ganesh_laxmi{
+  position: relative;
+  top: -270px;
+  left: 30px;
+}
+
+/* third section   */
+
+.third_section{
+  background: linear-gradient(180deg, #FFA200 0%, #E6C78C 35%, #EBBC7B 64%);
+  padding: 20px;
+  color: #333;
+  border-radius: 8px; 
+}
+
+.thank_you_div{
+  background: linear-gradient(180deg, #481D6C 0%, #870551 100%);
+  padding: 20px;
+  color: #FFFFFF; /* Ensures text is readable on dark background */
+  border-radius: 8px; /* Optional: adds rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  position: relative;
+}
+
+.rocket2{
+  position: relative;
+  top:50px;
+  z-index: 10;
+}
+
+.thank_you_div>p{
+  font-family: "Modern Antiqua", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
+/* Rotating animation */
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Apply rotation to chakra image */
+
+/* Apply rotation to rangoli image */
+.rangoli_second img {
+  animation: rotate 10s linear infinite;
+  width: 100%;
+}
+
+
+.burst-gifs {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+.burst-gifs img {
+  width: 100px; /* Adjust size as needed */
+  height: auto;
+}
+
+
+.darker-background {
+  background-color: rgba(0, 0, 0, 0.5); /* Dark background with some transparency */
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+
+
+
+}
