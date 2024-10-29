@@ -158,11 +158,17 @@ button:nth-child(2){
 
 }
 
+.mandap{
+ margin-left: 30px;
+}
+
 .ganesh_laxmi{
   position: relative;
-  top: -270px;
+  top: -250px;
   left: 30px;
 }
+
+
 
 /* third section   */
 
