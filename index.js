@@ -7,8 +7,9 @@ document
   });
 
 const burstButton = document.getElementById("burstButton");
+const pauseButton = document.getElementById("pauseButton");
 const burstGifs = document.querySelectorAll(".burst-gif");
-const firstSection = document.getElementById("first_section"); // Select the first section for background change
+const firstSection = document.getElementById("first_section");
 const audioFiles = [
   document.getElementById("cracklingSound1"),
   document.getElementById("cracklingSound2"),
@@ -17,6 +18,7 @@ const audioFiles = [
 
 let currentGifIndex = 0;
 let currentAudioIndex = 0; // Track the current audio index
+let audioTimeout; // Variable to store timeout for stopping audio
 
 // Function to play audio files sequentially
 function playAudioSequentially(index) {
@@ -25,13 +27,13 @@ function playAudioSequentially(index) {
     audioFiles[index].currentTime = 0; // Reset audio to the beginning
     audioFiles[index].play(); // Play the current audio
 
-    // After 5 seconds, play the next audio
-    audioFiles[index].onended = function () {
+    // Stop audio after 3 seconds
+    audioTimeout = setTimeout(() => {
+      audioFiles[index].pause(); // Stop the audio
+      audioFiles[index].currentTime = 0; // Reset audio position
       currentAudioIndex++; // Increment audio index
-      setTimeout(() => {
-        playAudioSequentially(currentAudioIndex); // Play next audio after current ends
-      }, 0); // No delay before starting the next audio
-    };
+      playAudioSequentially(currentAudioIndex); // Play next audio
+    }, 3000); // Stop after 3 seconds
   }
 }
 
@@ -67,6 +69,15 @@ burstButton.addEventListener("click", function () {
   setTimeout(() => {
     firstSection.classList.remove("darker-background");
   }, 1000); // Change duration as necessary (1000ms = 1 second)
+});
+
+// Pause button functionality
+pauseButton.addEventListener("click", function () {
+  // Pause the currently playing audio
+  if (currentAudioIndex < audioFiles.length) {
+    audioFiles[currentAudioIndex].pause();
+    clearTimeout(audioTimeout); // Clear the timeout
+  }
 });
 
 // Function to get query parameters from the URL
