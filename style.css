@@ -42,7 +42,8 @@ section > div > div:first-child img {
   animation: rotate 10s linear infinite;
 }
 
-h1{
+
+#greeting{
   font-family: "Playfair Display", serif;
   font-optical-sizing: auto;
   font-weight: 1000;

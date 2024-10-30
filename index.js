@@ -72,13 +72,13 @@ burstButton.addEventListener("click", function () {
 });
 
 // Pause button functionality
-pauseButton.addEventListener("click", function () {
-  // Pause the currently playing audio
-  if (currentAudioIndex < audioFiles.length) {
-    audioFiles[currentAudioIndex].pause();
-    clearTimeout(audioTimeout); // Clear the timeout
-  }
-});
+// pauseButton.addEventListener("click", function () {
+//   // Pause the currently playing audio
+//   if (currentAudioIndex < audioFiles.length) {
+//     audioFiles[currentAudioIndex].pause();
+//     clearTimeout(audioTimeout); // Clear the timeout
+//   }
+// });
 
 // Function to get query parameters from the URL
 function getQueryParameter(name) {
