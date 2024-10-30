@@ -16,7 +16,7 @@
   }
 
   #first_section{
-    background: linear-gradient(180deg, #F7B654 0%, #E12654 100%);
+    background: linear-gradient(360deg, #F7B654 0%, #E12654 100%);
 
     
   }
@@ -25,18 +25,17 @@
 section > div > div:first-child {
   position: relative;
   overflow: hidden;
-  height: 50vh; /* Show only the top half */
+  height: 40vh; /* Show only the top half */
   display: flex;
   align-items: flex-start; /* Align image to the top */
   justify-content: center; /* Center the image horizontally */
-  /* background-color: aqua; */
 }
 
 /* Image styles */
 section > div > div:first-child img {
   position: absolute;
   top: -65%; /* Adjust this value to crop the desired part of the image */
-  width: 100%;
+  width: 90%;
   max-height: none; /* Ensures the image does not scale down */
   object-fit: cover;
   animation: rotate 10s linear infinite;
@@ -48,7 +47,11 @@ section > div > div:first-child img {
   font-optical-sizing: auto;
   font-weight: 1000;
   color: white;
-  font-size: 3rem;
+  font-size: 2.5rem;
+  padding-left: 1.5rem;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6), 0 0 10px rgba(255, 255, 255, 0.5);
+
+  /* Optional: adding a subtle box shadow */
 }
 
 .head-deepak{
@@ -77,6 +80,8 @@ section > div > div:first-child img {
   font-size: 1.5rem;
   color: #fff;
   padding: 0 1rem;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6), 0 0 10px rgba(255, 255, 255, 0.5);
+
 
 }
   
